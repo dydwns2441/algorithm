@@ -37,4 +37,6 @@
         let arr = [2, 4, 5, 4, 6]
         let m = 8 //8번의 숫자를 더해야한다.
         let k = 3 //한 숫자를 연속으로 쓸수 있는 횟수
-        console.log(solution(arr, k, m));
+console.log(solution(arr, k, m));
+        
+// 이것이 취업을 위한 코딩테스트이다 //그리디부분

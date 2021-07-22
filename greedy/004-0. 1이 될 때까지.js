@@ -27,3 +27,6 @@ function solution(N, K) {
 console.log(solution(25, 5));  //2
 console.log(solution(25, 3));  //6
 console.log(solution(17, 4));  //3
+
+
+// 이것이 취업을 위한 코딩테스트이다 //그리디부분

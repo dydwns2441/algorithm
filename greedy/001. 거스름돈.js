@@ -15,4 +15,7 @@
         //시간 복잡도는 O(k)
 
     let n = 1260;
-    console.log(solution(n));
+console.log(solution(n));
+    
+
+// 이것이 취업을 위한 코딩테스트이다 //그리디부분
