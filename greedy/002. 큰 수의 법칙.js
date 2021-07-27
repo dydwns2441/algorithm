@@ -34,6 +34,26 @@
 
 
 
+// function solution(arr, k, m) {
+//     let answer = 0;
+//         arr.sort((a, b) => a - b);
+//     let first = arr[arr.length - 1]
+//     let second = arr[arr.length -2]
+    
+//     while (m > 0) {
+//         for (let i = 0; i < k; i++){
+//             if (m === 0) break;
+//             answer += first
+//             m -=1
+//             }
+//     }
+//     if (m === 0) break;
+//     resul += second;
+//     m -= 1;
+
+//     return answer;
+// }
+
         let arr = [2, 4, 5, 4, 6]
         let m = 8 //8번의 숫자를 더해야한다.
         let k = 3 //한 숫자를 연속으로 쓸수 있는 횟수

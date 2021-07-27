@@ -16,6 +16,7 @@ function solution(N) {
     return count;
 }
 
+console.log(solution(5));
 console.log(solution(3));
 
 //*탐색 문제의 경우
