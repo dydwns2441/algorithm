@@ -1,28 +1,28 @@
 //다 통과하지 못했다......비코즈
 //옷을 잃어버렸지만, 2벌을 가져왔을 경우 한벌이 된다
-function solution(n, lost, reserve) {
-    let inStudent = [];
+// function solution(n, lost, reserve) {
+//     let inStudent = [];
 
-    for(let i=1; i<=n ; i++){
-        if(!lost.includes(i)){
-            inStudent.push(i)
-        }}
+//     for(let i=1; i<=n ; i++){
+//         if(!lost.includes(i)){
+//             inStudent.push(i)
+//         }}
 
-	for(let i=0; i< lost.length;i++){
-        if(reserve.includes(lost[i]-1)){
-            inStudent.push(lost[i])
-            reserve.splice(reserve.indexOf(lost[i]-1),1);
-        } else if(reserve.includes(lost[i]+1)){
-            inStudent.push(lost[i])
-            reserve.splice(reserve.indexOf(lost[i]+1),1);
-        }
-        console.log("for inStudent :", inStudent)
-        console.log("lost[i] : ", lost[i])
-    }
+// 	for(let i=0; i< lost.length;i++){
+//         if(reserve.includes(lost[i]-1)){
+//             inStudent.push(lost[i])
+//             reserve.splice(reserve.indexOf(lost[i]-1),1);
+//         } else if(reserve.includes(lost[i]+1)){
+//             inStudent.push(lost[i])
+//             reserve.splice(reserve.indexOf(lost[i]+1),1);
+//         }
+//         console.log("for inStudent :", inStudent)
+//         console.log("lost[i] : ", lost[i])
+//     }
 
-    let answer = inStudent.length;
-    return answer;
-};
+//     let answer = inStudent.length;
+//     return answer;
+// };
 
 
 function solution(n, lost, reserve) {
@@ -39,10 +39,13 @@ function solution(n, lost, reserve) {
     for (let i = 0; i < lost.length; i++) {
       if (sortlost[i] - 1 === cur || sortlost[i] + 1 === cur) {
         answer += 1;
-        cur = queue.shift();
+        cur=queue.shift();
       }
     }
   }
 
   return answer - sortlost.length;
 }
+
+console.log(solution(5, [2, 4], [1, 3, 5]));
+console.log(solution(5, [2, 4], [3]));
