@@ -9,4 +9,4 @@ function solution(n) {
 //paeseInt(num, 진법) 
 // 두번째 인자는 2~36까지 가능
 // 
-console.log(solution(45))
+console.log(solution(45))//asdasda
