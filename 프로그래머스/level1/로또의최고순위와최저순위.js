@@ -1,18 +1,21 @@
-function solution(lottos, win_nums) {
-  let rank = [6, 6, 5, 4, 3, 2, 1];
-  var answer = [];
+// 0이라는 숫자 맞을 수도 틀린 경우의 수가 된다.
+// 0의 갯수를 제외한 숫자들이 몇개나 같은지 먼저 확인한다.
+// 0의 갯수에 따라 등수를 찾는다.
 
+function solution(lottos, win_nums) {
+  var answer = [];
+  let rank = [6, 6, 5, 4, 3, 2, 1];
   let count = 0;
-  let zero = 0;
-  for (let num of lottos) {
-    if (win_nums.includes(num)) {
+  let zeroCount = 0;
+  for (let i = 0; i < lottos.length; i++) {
+    if (lottos[i] === 0) zeroCount++;
+    else if (win_nums.includes(lottos[i])) {
       count++;
-    } else if (num === 0) {
-      zero++;
     }
   }
 
-  answer.push(rank[count + zero], rank[count]);
+  answer.push(rank[count + zeroCount], rank[count]);
+
   return answer;
 }
 
